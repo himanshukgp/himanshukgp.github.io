@@ -3,148 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Himanshu | Senior Backend Engineer</title>
-  <meta name="description" content="Himanshu: senior backend engineer building payment, reconciliation and event-driven systems. IIT Kharagpur.">
+  <title>Himanshu</title>
+  <meta name="description" content="Himanshu: backend engineer building payment, reconciliation and event-driven systems. IIT Kharagpur.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --line: #e7e5e4;
-      --accent: #0f766e; --accent-fg: #ffffff; --card: #ffffff;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --line: #292524;
-        --accent: #2dd4bf; --accent-fg: #042f2e; --card: #1c1917;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; background: var(--bg); color: var(--fg);
-      font: 16px/1.6 Inter, system-ui, -apple-system, sans-serif;
-    }
-    main { max-width: 820px; margin: 0 auto; padding: 56px 16px 72px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    header h1 { font-size: 2.4rem; margin: 0; letter-spacing: -0.02em; }
-    header .role { font-size: 1.15rem; color: var(--muted); margin: 4px 0 16px; }
-    .links { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: .95rem; }
-    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-    .btn {
-      display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600;
-      border: 1px solid var(--accent);
-    }
-    .btn.primary { background: var(--accent); color: var(--accent-fg); }
-    .btn:hover { text-decoration: none; opacity: .9; }
-    section { margin-top: 44px; }
-    h2 {
-      font-size: .8rem; text-transform: uppercase; letter-spacing: .12em;
-      color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 8px; margin: 0 0 18px;
-    }
-    .job { margin-bottom: 26px; }
-    .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; }
-    .job-head h3 { margin: 0; font-size: 1.05rem; }
-    .job-head .when { color: var(--muted); font-size: .9rem; white-space: nowrap; }
-    .sub { color: var(--muted); font-size: .95rem; margin: 2px 0 8px; }
-    ul { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: .88rem; }
-    footer { margin-top: 56px; color: var(--muted); font-size: .85rem; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./">Himanshu</a>
+    <div class="tabs">
+      <a class="active" href="./">Home</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+</nav>
+
 <main>
-  <header>
-    <h1>Himanshu</h1>
-    <p class="role">Senior Backend Engineer · Bengaluru, India</p>
-    <div class="links">
-      <a href="mailto:himanshukgp1@gmail.com">himanshukgp1@gmail.com</a>
-      <a href="https://www.linkedin.com/in/tohimanshu/">LinkedIn</a>
-      <a href="https://github.com/himanshukgp/">GitHub</a>
-    </div>
-    <div class="cta">
-      <a class="btn primary" href="resume.pdf">View resume (PDF)</a>
-      <a class="btn" href="resume.pdf" download="Himanshu_Resume.pdf">Download</a>
-    </div>
-  </header>
-
-  <section>
-    <h2>Profile</h2>
-    <p>Backend engineer with experience building high-volume payment systems (150K txns/day, 14 bank integrations, reconciliation in under 10 minutes) at PayGlocal and company-wide supply planning infrastructure at Flipkart. I specialize in event-driven microservices, serverless orchestration on AWS, and financial reconciliation platforms. Published researcher (IEEE/Springer), IIT Kharagpur.</p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-
-    <div class="job">
-      <div class="job-head"><h3>PayGlocal Technologies</h3><span class="when">Oct 2025 – Present</span></div>
-      <p class="sub">Senior Software Engineer · Bengaluru</p>
-      <ul>
-        <li>Architected an escrow mirroring system processing ~150K daily transactions across 14 bank integrations into internal ledgers with near-real-time sync, enabling auditability and downstream reconciliation for card payment orchestration.</li>
-        <li>Built a multi-tenant settlement and reconciliation platform matching internal payment events with bank statements; cut reconciliation from hours of manual effort to under 10 minutes via idempotent ingestion and discrepancy detection.</li>
-        <li>Developed a chargeback pipeline handling ~1,000 concurrent dispute cases with automated lifecycle tracking, cross-system mapping (RRN/UTR) and merchant-facing status updates.</li>
-        <li>Designed a deterministic DynamoDB key schema (composite keys, GSIs, monotonic sequencing) for deduplication, replay safety and ordering across high-frequency financial ingestion.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3>Clamator Technologies</h3><span class="when">Feb 2024 – Oct 2025</span></div>
-      <p class="sub">Founding Engineer · Bengaluru</p>
-      <ul>
-        <li>Sole engineer behind ZaubX, an AI-powered EdTech platform (App Runner, Vercel, Firebase) architected for 100K+ concurrent capacity; built a human-in-the-loop content ingestion pipeline with multi-reviewer validation and LLM-based enrichment.</li>
-        <li>Deployed a WhatsApp bot handling ~24K messages/day from ~1,200 DAU for university attendance and academic workflows, built solo on Spring Boot at under ₹700/month infra cost.</li>
-        <li>Architected a structured knowledge graph (Cases → Slides → Notes → Questions) with deterministic retrieval APIs and session-persistent mentor chat.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3>Flipkart</h3><span class="when">Jun 2021 – Oct 2022</span></div>
-      <p class="sub">Software Development Engineer · Bengaluru</p>
-      <ul>
-        <li>Designed REST APIs orchestrating ETL pipelines processing TBs/day across Spark/Hive, consumed company-wide by business planning, warehouse managers and delivery hubs.</li>
-        <li>Owned Flipkart's end-to-end supply planning backend (Dropwizard, MySQL, Azkaban, Spark/Hive), replacing manual Excel-based planning with automated, UI-driven demand–supply workflows.</li>
-        <li>Built a Kafka event pipeline with idempotent handling and offset-commit-after-processing for effectively exactly-once semantics; fixed a production concurrency bug where duplicate callbacks spawned parallel job execution.</li>
-      </ul>
+  <section class="hero" style="margin-top:0">
+    <img src="img/himanshu.jpeg" alt="Photo of Himanshu">
+    <div>
+      <h1>Hi, I'm Himanshu.</h1>
+      <p class="tagline">I build backend systems that move money reliably: payments, settlement and reconciliation.</p>
+      <div class="socials">
+        <a class="btn primary" href="resume.html">View resume</a>
+        <a class="btn" href="https://github.com/himanshukgp/">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/tohimanshu/">LinkedIn</a>
+        <a class="btn" href="mailto:himanshukgp1@gmail.com">Email</a>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Skills</h2>
-    <div class="tags">
-      <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Dropwizard</span>
-      <span class="tag">Python</span><span class="tag">AWS Lambda</span><span class="tag">Step Functions</span>
-      <span class="tag">DynamoDB</span><span class="tag">S3</span><span class="tag">AWS Batch</span>
-      <span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">Hive</span>
-      <span class="tag">Event-Driven Architecture</span><span class="tag">Microservices</span><span class="tag">Financial Systems</span>
+    <h2>About</h2>
+    <div class="lead">
+      <p>I'm a senior software engineer at <strong>PayGlocal</strong> in Bengaluru, where I work on the plumbing behind card payments: mirroring escrow accounts across bank integrations, matching every internal event against bank statements, and making sure disputes don't fall through the cracks.</p>
+      <p>Before that I was the founding engineer at an EdTech startup, shipping an AI learning platform and a WhatsApp bot on my own. Earlier I worked on supply planning at <strong>Flipkart</strong>. I studied Mathematics and Computing at <strong>IIT Kharagpur</strong>, where I also published research on EEG signal classification.</p>
+      <p>I care most about idempotency, ordering and auditability: the properties that decide whether a financial system can be trusted.</p>
     </div>
   </section>
 
   <section>
-    <h2>Education</h2>
-    <div class="job">
-      <div class="job-head"><h3>Indian Institute of Technology, Kharagpur</h3><span class="when">Jul 2016 – Apr 2021</span></div>
-      <p class="sub">5-year Integrated MSc, Mathematics and Computing · GPA 8.25/10</p>
+    <h2>What I work on</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Payments &amp; reconciliation</h3>
+        <p>Ledgers, settlement, chargebacks, and matching internal events against bank statements at scale.</p>
+      </div>
+      <div class="card">
+        <h3>Event-driven systems</h3>
+        <p>Kafka pipelines with idempotent consumers, replay safety and effectively exactly-once processing.</p>
+      </div>
+      <div class="card">
+        <h3>Serverless on AWS</h3>
+        <p>Lambda, Step Functions, DynamoDB and Batch, with key schemas designed for dedup and ordering.</p>
+      </div>
+      <div class="card">
+        <h3>AI-backed products</h3>
+        <p>LLM enrichment pipelines with human review, and structured retrieval kept separate from generation.</p>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Publications</h2>
-    <ul>
-      <li>Sreeja S. R., Himanshu, D. Samanta. <em>Weighted sparse representation for classification of motor imagery EEG signals.</em> 41st IEEE Engineering in Medicine and Biology Conference (EMBC), Berlin, July 2019.</li>
-      <li>Sreeja S. R., Himanshu, D. Samanta. <em>Distance-based weighted sparse representation to classify motor imagery EEG signals for BCI applications.</em> Multimedia Tools and Applications 79, 13775–13793 (2020).</li>
+    <h2>Things I've built</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="meta">Payments</div>
+        <h3>Reconciliation platform</h3>
+        <p>Multi-tenant settlement and recon that took a manual, hours-long process down to under 10 minutes.</p>
+      </div>
+      <div class="card">
+        <div class="meta">EdTech · Solo</div>
+        <h3>ZaubX</h3>
+        <p>AI learning platform with a knowledge graph of cases, slides, notes and questions, plus a mentor chat.</p>
+      </div>
+      <div class="card">
+        <div class="meta">Bot · Solo</div>
+        <h3>WhatsApp attendance bot</h3>
+        <p>~24K messages a day from ~1,200 students, run on Spring Boot for under ₹700 a month.</p>
+      </div>
+      <div class="card">
+        <div class="meta">Open source</div>
+        <h3>SunPy contributions</h3>
+        <p>Features and unit tests for the open-source Python library for solar physics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Journey</h2>
+    <ul class="journey">
+      <li><span class="when">2025 – now</span><strong>PayGlocal</strong><span class="what">Senior Software Engineer: payments infrastructure</span></li>
+      <li><span class="when">2024 – 2025</span><strong>Clamator Technologies</strong><span class="what">Founding Engineer: AI EdTech platform</span></li>
+      <li><span class="when">2021 – 2022</span><strong>Flipkart</strong><span class="what">SDE: supply planning backend and data pipelines</span></li>
+      <li><span class="when">2016 – 2021</span><strong>IIT Kharagpur</strong><span class="what">Integrated MSc, Mathematics and Computing</span></li>
     </ul>
   </section>
 
   <section>
-    <h2>Other</h2>
-    <ul>
-      <li><strong>Open source:</strong> contributed features and unit tests to SunPy, an open-source Python library.</li>
-      <li><strong>G-Attach:</strong> email attachment organizer web app built during Microsoft Code.fun.do.</li>
+    <h2>Research</h2>
+    <ul class="pubs">
+      <li><em>Weighted sparse representation for classification of motor imagery EEG signals.</em> IEEE EMBC, Berlin, 2019.</li>
+      <li><em>Distance-based weighted sparse representation to classify motor imagery EEG signals for BCI applications.</em> Multimedia Tools and Applications, Springer, 2020.</li>
     </ul>
   </section>
 
-  <footer>© 2026 Himanshu</footer>
+  <section class="card contact">
+    <h2>Get in touch</h2>
+    <p>Open to conversations about backend and payments engineering roles.</p>
+    <div class="socials">
+      <a class="btn primary" href="mailto:himanshukgp1@gmail.com">himanshukgp1@gmail.com</a>
+      <a class="btn" href="resume.html">Resume</a>
+    </div>
+  </section>
 </main>
+
+<footer>© 2026 Himanshu · Bengaluru</footer>
 </body>
 </html>
